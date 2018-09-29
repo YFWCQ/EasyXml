@@ -16,9 +16,9 @@
 		5E8A0796215DFCE800ADDF6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A0795215DFCE800ADDF6C /* main.m */; };
 		5E8A07A0215DFCE800ADDF6C /* YFXmlManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A079F215DFCE800ADDF6C /* YFXmlManagerDemoTests.m */; };
 		5E8A07AB215DFCE800ADDF6C /* YFXmlManagerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07AA215DFCE800ADDF6C /* YFXmlManagerDemoUITests.m */; };
-		5E8A07BB215DFF4600ADDF6C /* EasyXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07BA215DFF4600ADDF6C /* EasyXML.m */; };
 		5E8A07C1215E01EC00ADDF6C /* YFTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07C0215E01EC00ADDF6C /* YFTestModel.m */; };
 		5E8A07C5215F2D2200ADDF6C /* TestXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5E8A07C4215F2D2200ADDF6C /* TestXML.xml */; };
+		5E8A07C7215F660200ADDF6C /* EasyXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07BA215DFF4600ADDF6C /* EasyXML.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -335,10 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8A07C1215E01EC00ADDF6C /* YFTestModel.m in Sources */,
+				5E8A07C7215F660200ADDF6C /* EasyXML.m in Sources */,
 				5E8A078B215DFCE500ADDF6C /* ViewController.m in Sources */,
 				5E8A0796215DFCE800ADDF6C /* main.m in Sources */,
 				5E8A0788215DFCE500ADDF6C /* AppDelegate.m in Sources */,
-				5E8A07BB215DFF4600ADDF6C /* EasyXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,6 +3,22 @@ EasyXml
 * EasyXML can let you use data like json
 
 
+#### CocoaPods
+
+With [CocoaPods](http://cocoapods.org/), add this line to your `Podfile`.
+
+```
+pod 'EasyXml'
+```
+
+and run `pod install`, then you're all done!
+
+#### Manually
+1. Download and drop ```/EasyXml```folder in your project.  
+2. Congratulations! 
+
+## How to use
+
 #### 主线程
 
 ```
