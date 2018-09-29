@@ -9,14 +9,14 @@
 #import "EasyXML.h"
 
 @interface EasyXML ()<NSXMLParserDelegate>
-@property(nonatomic, copy)NSString *url;
+@property(nonatomic, copy)NSURL *url;
 @property(nonatomic, copy)void(^jsonBlock)(NSDictionary *jsonDic,NSUInteger idx,BOOL analyseEnd);
 
 @property(nonatomic, assign)NSUInteger idx;
 /**
  * 以此标签  给 数据分组
  */
-@property(nonatomic,copy)NSString *jsonsTag;
+@property(nonatomic,strong)NSMutableSet *jsonsTagSet;
 
 
 @property(nonatomic, strong)NSMutableDictionary *tempJsonDic;
@@ -27,11 +27,19 @@
 @implementation EasyXML {
     NSString *_currentTagName;
 }
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.jsonsTagSet = [NSMutableSet set];
+    }
+    return self;
+}
 
-+ (instancetype)analyseAsyncXmlUrl:(NSString *)url jsonsTag:(NSString *)jsonsTag jsonBlock:(void(^)(NSDictionary *json, NSUInteger idx,BOOL analyseEnd))jsonBlock {
++ (instancetype)analyseAsyncXmlUrl:(NSURL *)url jsonsTags:(NSArray *)jsonsTags jsonBlock:(void(^)(NSDictionary *json, NSUInteger idx,BOOL analyseEnd))jsonBlock {
     EasyXML *easyXml = [[EasyXML alloc] init];
     easyXml.url = url;
-    easyXml.jsonsTag = jsonsTag;
+    [easyXml.jsonsTagSet addObjectsFromArray:jsonsTags];
     easyXml.jsonBlock = jsonBlock;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [easyXml analyseXml];
@@ -40,10 +48,10 @@
 }
 
 
-+ (instancetype)analyseSyncXmlUrl:(NSString *)url jsonsTag:(NSString *)jsonsTag jsonBlock:(void(^)(NSDictionary *json, NSUInteger idx,BOOL analyseEnd))jsonBlock {
++ (instancetype)analyseSyncXmlUrl:(NSURL *)url jsonsTags:(NSArray *)jsonsTags jsonBlock:(void(^)(NSDictionary *json, NSUInteger idx,BOOL analyseEnd))jsonBlock {
     EasyXML *easyXml = [[EasyXML alloc] init];
     easyXml.url = url;
-    easyXml.jsonsTag = jsonsTag;
+    [easyXml.jsonsTagSet addObjectsFromArray:jsonsTags];
     easyXml.jsonBlock = jsonBlock;
     [easyXml analyseXml];
     
@@ -52,19 +60,15 @@
 
 
 - (void)analyseXml {
+    if (_url == nil) {
+        NSLog(@"url != nil");
+        return;
+    }
+    
     self.idx = 0;
     
-//    self.url = [self.url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    self.url = [self.url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"#%^{}\"[]|\\<> "].invertedSet];
-    
-    
-    NSParameterAssert(self.url);
-    NSURL *url = [NSURL fileURLWithPath:self.url];
-    NSParameterAssert(url);
-    
     //开始解析 xml
-    NSXMLParser * parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+    NSXMLParser * parser = [[NSXMLParser alloc] initWithContentsOfURL:self.url];
     parser.delegate = self ;
     [parser parse];
 
@@ -88,7 +92,7 @@
     _currentTagName  = elementName ;
     
     //如果名字 是Note就取出 id
-    if ([_currentTagName isEqualToString:_jsonsTag]) {
+    if ([self.jsonsTagSet containsObject:_currentTagName]) {
 
         if (self.jsonBlock && self.tempJsonDic) {
             self.jsonBlock(self.tempJsonDic, self.idx, NO);

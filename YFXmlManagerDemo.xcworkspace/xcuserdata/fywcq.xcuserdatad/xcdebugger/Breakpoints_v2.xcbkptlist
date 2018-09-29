@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YFXmlManagerDemo/EasyXml/EasyXML.m"
-            timestampString = "559842926.915199"
+            timestampString = "559894970.616694"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-parser:foundCharacters:"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,59 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YFXmlManagerDemo/EasyXml/EasyXML.m"
-            timestampString = "559842926.915303"
+            timestampString = "559894970.616825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "-analyseXml"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[EasyXML analyseXml]"
-                  moduleName = "YFXmlManagerDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fywcq/Documents/GitResposit/EasyXml/YFXmlManagerDemo/EasyXml/EasyXML.m"
-                  timestampString = "559842927.013384"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "277">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[EasyXML analyseXml]"
-                  moduleName = "YFXmlManagerDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fywcq/Documents/GitResposit/EasyXml/YFXmlManagerDemo/EasyXml/EasyXML.m"
-                  timestampString = "559842927.017482"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "358">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YFXmlManagerDemo/EasyXml/EasyXML.m"
-            timestampString = "559842926.91537"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-analyseXml"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,12 +138,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YFXmlManagerDemo/EasyXml/EasyXML.m"
-            timestampString = "559842926.915433"
+            timestampString = "559894970.616912"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-parser:didStartElement:namespaceURI:qualifiedName:attributes:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YFXmlManagerDemo/EasyXml/EasyXML.m"
+            timestampString = "559894970.616995"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-parserDidStartDocument:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YFXmlManagerDemo/EasyXml/EasyXML.m"
+            timestampString = "559894970.617074"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-parser:parseErrorOccurred:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YFXmlManagerDemo/EasyXml/EasyXML.m"
+            timestampString = "559894970.6171499"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-parser:foundCharacters:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

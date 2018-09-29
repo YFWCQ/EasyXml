@@ -18,20 +18,20 @@ NS_ASSUME_NONNULL_BEGIN
  异线程解析
 
  @param url url
- @param jsonsTag 根据此Tag 来区分 有多少个 json
+ @param jsonsTags 根据此Tag 来区分 有多少个 json
  @param jsonBlock block
  @return EasyXML
  */
-+ (instancetype)analyseAsyncXmlUrl:(NSString *)url jsonsTag:(NSString *)jsonsTag jsonBlock:(void(^)(NSDictionary *json, NSUInteger idx,BOOL analyseEnd))jsonBlock;
++ (instancetype)analyseAsyncXmlUrl:(NSURL *)url jsonsTags:(NSArray *)jsonsTags jsonBlock:(void(^)(NSDictionary *json, NSUInteger idx,BOOL analyseEnd))jsonBlock;
 /**
  主线程解析
  
  @param url url
- @param jsonsTag 根据此Tag 来区分 有多少个 json
+ @param jsonsTags 根据此Tag 来区分 有多少个 json
  @param jsonBlock block
  @return EasyXML
  */
-+ (instancetype)analyseSyncXmlUrl:(NSString *)url jsonsTag:(NSString *)jsonsTag jsonBlock:(void(^)(NSDictionary *json, NSUInteger idx,BOOL analyseEnd))jsonBlock;
++ (instancetype)analyseSyncXmlUrl:(NSURL *)url jsonsTags:(NSArray *)jsonsTags jsonBlock:(void(^)(NSDictionary *json, NSUInteger idx,BOOL analyseEnd))jsonBlock;
 
 @end
 

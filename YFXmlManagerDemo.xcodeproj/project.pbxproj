@@ -17,9 +17,8 @@
 		5E8A07A0215DFCE800ADDF6C /* YFXmlManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A079F215DFCE800ADDF6C /* YFXmlManagerDemoTests.m */; };
 		5E8A07AB215DFCE800ADDF6C /* YFXmlManagerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07AA215DFCE800ADDF6C /* YFXmlManagerDemoUITests.m */; };
 		5E8A07BB215DFF4600ADDF6C /* EasyXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07BA215DFF4600ADDF6C /* EasyXML.m */; };
-		5E8A07BE215DFF7200ADDF6C /* MDXMLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07BC215DFF7200ADDF6C /* MDXMLManager.m */; };
 		5E8A07C1215E01EC00ADDF6C /* YFTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07C0215E01EC00ADDF6C /* YFTestModel.m */; };
-		5E8A07C3215E45DD00ADDF6C /* MDXML2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5E8A07C2215E45DD00ADDF6C /* MDXML2.xml */; };
+		5E8A07C5215F2D2200ADDF6C /* TextXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5E8A07C4215F2D2200ADDF6C /* TextXML.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +60,9 @@
 		5E8A07AC215DFCE800ADDF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E8A07B9215DFF4600ADDF6C /* EasyXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyXML.h; sourceTree = "<group>"; };
 		5E8A07BA215DFF4600ADDF6C /* EasyXML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyXML.m; sourceTree = "<group>"; };
-		5E8A07BC215DFF7200ADDF6C /* MDXMLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDXMLManager.m; sourceTree = "<group>"; };
-		5E8A07BD215DFF7200ADDF6C /* MDXMLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDXMLManager.h; sourceTree = "<group>"; };
 		5E8A07BF215E01EC00ADDF6C /* YFTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFTestModel.h; sourceTree = "<group>"; };
 		5E8A07C0215E01EC00ADDF6C /* YFTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFTestModel.m; sourceTree = "<group>"; };
-		5E8A07C2215E45DD00ADDF6C /* MDXML2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MDXML2.xml; sourceTree = "<group>"; };
+		5E8A07C4215F2D2200ADDF6C /* TextXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TextXML.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,11 +124,9 @@
 		5E8A0785215DFCE500ADDF6C /* YFXmlManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5E8A07C2215E45DD00ADDF6C /* MDXML2.xml */,
+				5E8A07C4215F2D2200ADDF6C /* TextXML.xml */,
 				5E8A07BF215E01EC00ADDF6C /* YFTestModel.h */,
 				5E8A07C0215E01EC00ADDF6C /* YFTestModel.m */,
-				5E8A07BD215DFF7200ADDF6C /* MDXMLManager.h */,
-				5E8A07BC215DFF7200ADDF6C /* MDXMLManager.m */,
 				5E8A07B8215DFD4500ADDF6C /* EasyXml */,
 				5E8A0786215DFCE500ADDF6C /* AppDelegate.h */,
 				5E8A0787215DFCE500ADDF6C /* AppDelegate.m */,
@@ -287,7 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8A0793215DFCE800ADDF6C /* LaunchScreen.storyboard in Resources */,
-				5E8A07C3215E45DD00ADDF6C /* MDXML2.xml in Resources */,
+				5E8A07C5215F2D2200ADDF6C /* TextXML.xml in Resources */,
 				5E8A0790215DFCE800ADDF6C /* Assets.xcassets in Resources */,
 				5E8A078E215DFCE500ADDF6C /* Main.storyboard in Resources */,
 			);
@@ -344,7 +339,6 @@
 				5E8A0796215DFCE800ADDF6C /* main.m in Sources */,
 				5E8A0788215DFCE500ADDF6C /* AppDelegate.m in Sources */,
 				5E8A07BB215DFF4600ADDF6C /* EasyXML.m in Sources */,
-				5E8A07BE215DFF7200ADDF6C /* MDXMLManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +381,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		5E8A0791215DFCE800ADDF6C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;

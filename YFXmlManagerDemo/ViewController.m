@@ -24,38 +24,51 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    NSDictionary *dic = @{
-//                          @"age":@(1),
-//                          @"name":@"name",
-//                          @"books":@[@"a",@"d",@"g"]
-//                          };
-//
-//
-//    YFTestModel *model = [[YFTestModel alloc] init];
-//    [model yy_modelSetWithJSON:dic];
+
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"MDXML2" ofType:@"xml"];
-    
-    path = @"http://www.runoob.com/try/xml/note.xml";
-    
-    EasyXML *xml = [EasyXML analyseSyncXmlUrl:path jsonsTag:@"title" jsonBlock:^(NSDictionary * _Nonnull json, NSUInteger idx, BOOL analyseEnd) {
-//        NSLog(@"%@",json);
-//        NSLog(@"%ld",idx);
-//        NSLog(@"%ld",analyseEnd);
-        
-        YFTestModel *model = [[YFTestModel alloc] init];
-        [model yy_modelSetWithJSON:json];
-        
-        NSLog(@"title:%@",model.title);
-        
-    }];
-    
-    _xml = xml;
-    
+   
     
     
     
 }
+- (IBAction)localData:(id)sender {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TextXML" ofType:@"xml"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    
+    EasyXML *xml = [EasyXML analyseSyncXmlUrl:url jsonsTags:@[@"TITLE"] jsonBlock:^(NSDictionary * _Nonnull json, NSUInteger idx, BOOL analyseEnd) {
+        NSLog(@"%@",json);
+        NSLog(@"idx:%ld",idx);
+        NSLog(@"%@",@(analyseEnd));
+        
+        //        YFTestModel *model = [[YFTestModel alloc] init];
+        //        [model yy_modelSetWithJSON:json]
+        
+    }];
+    
+    _xml = xml;
+}
+- (IBAction)remoteData:(id)sender {
+ 
+    NSURL *url = [NSURL URLWithString:@"http://www.w3school.com.cn/example/xmle/cd_catalog.xml"];
+
+    EasyXML *xml = [EasyXML analyseAsyncXmlUrl:url jsonsTags:@[@"TITLE"] jsonBlock:^(NSDictionary * _Nonnull json, NSUInteger idx, BOOL analyseEnd) {
+        NSLog(@"%@",json);
+        NSLog(@"idx:%ld",idx);
+        NSLog(@"%@",@(analyseEnd));
+        //        YFTestModel *model = [[YFTestModel alloc] init];
+        //        [model yy_modelSetWithJSON:json];
+
+        if (analyseEnd == YES) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 更新UI
+            });
+        }
+
+    }];
+    
+    _xml = xml;
+}
+
 
 
 @end
