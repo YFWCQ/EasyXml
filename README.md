@@ -1,10 +1,10 @@
 EasyXml
 ================
-EasyXml is a easy xml tool 
-EasyXML can let you use data like json
+* EasyXml is a easy xml tool 
+* EasyXML can let you use data like json
 
 
-* 主线程
+#### 主线程
 
 ```
 NSString *path = [[NSBundle mainBundle] pathForResource:@"TestXML" ofType:@"xml"];
@@ -20,7 +20,7 @@ _xml = [EasyXML analyseSyncXmlUrl:url jsonsTags:@[@"TITLE"] jsonBlock:^(NSDictio
    
 ```
 
-* 异线程 
+#### 异线程 
 
 ```
 NSURL *url = [NSURL URLWithString:@"http://www.w3school.com.cn/example/xmle/cd_catalog.xml"];
