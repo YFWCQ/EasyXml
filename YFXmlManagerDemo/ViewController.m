@@ -32,13 +32,16 @@
     
 }
 - (IBAction)localData:(id)sender {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"TextXML" ofType:@"xml"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TestXML" ofType:@"xml"];
     NSURL *url = [NSURL fileURLWithPath:path];
     
     EasyXML *xml = [EasyXML analyseSyncXmlUrl:url jsonsTags:@[@"TITLE"] jsonBlock:^(NSDictionary * _Nonnull json, NSUInteger idx, BOOL analyseEnd) {
         NSLog(@"%@",json);
-        NSLog(@"idx:%ld",idx);
-        NSLog(@"%@",@(analyseEnd));
+        NSLog(@"索引 idx:%ld",idx);
+        if (analyseEnd) {
+            NSLog(@"解析完毕");
+        }
+        
         
         //        YFTestModel *model = [[YFTestModel alloc] init];
         //        [model yy_modelSetWithJSON:json]
@@ -54,11 +57,11 @@
     EasyXML *xml = [EasyXML analyseAsyncXmlUrl:url jsonsTags:@[@"TITLE"] jsonBlock:^(NSDictionary * _Nonnull json, NSUInteger idx, BOOL analyseEnd) {
         NSLog(@"%@",json);
         NSLog(@"idx:%ld",idx);
-        NSLog(@"%@",@(analyseEnd));
         //        YFTestModel *model = [[YFTestModel alloc] init];
         //        [model yy_modelSetWithJSON:json];
 
         if (analyseEnd == YES) {
+            NSLog(@"解析完毕");
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 更新UI
             });

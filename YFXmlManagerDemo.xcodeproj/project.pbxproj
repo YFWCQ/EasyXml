@@ -18,7 +18,7 @@
 		5E8A07AB215DFCE800ADDF6C /* YFXmlManagerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07AA215DFCE800ADDF6C /* YFXmlManagerDemoUITests.m */; };
 		5E8A07BB215DFF4600ADDF6C /* EasyXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07BA215DFF4600ADDF6C /* EasyXML.m */; };
 		5E8A07C1215E01EC00ADDF6C /* YFTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A07C0215E01EC00ADDF6C /* YFTestModel.m */; };
-		5E8A07C5215F2D2200ADDF6C /* TextXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5E8A07C4215F2D2200ADDF6C /* TextXML.xml */; };
+		5E8A07C5215F2D2200ADDF6C /* TestXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5E8A07C4215F2D2200ADDF6C /* TestXML.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		5E8A07BA215DFF4600ADDF6C /* EasyXML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyXML.m; sourceTree = "<group>"; };
 		5E8A07BF215E01EC00ADDF6C /* YFTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFTestModel.h; sourceTree = "<group>"; };
 		5E8A07C0215E01EC00ADDF6C /* YFTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFTestModel.m; sourceTree = "<group>"; };
-		5E8A07C4215F2D2200ADDF6C /* TextXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TextXML.xml; sourceTree = "<group>"; };
+		5E8A07C4215F2D2200ADDF6C /* TestXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestXML.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 		5E8A0785215DFCE500ADDF6C /* YFXmlManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5E8A07C4215F2D2200ADDF6C /* TextXML.xml */,
+				5E8A07C4215F2D2200ADDF6C /* TestXML.xml */,
 				5E8A07BF215E01EC00ADDF6C /* YFTestModel.h */,
 				5E8A07C0215E01EC00ADDF6C /* YFTestModel.m */,
 				5E8A07B8215DFD4500ADDF6C /* EasyXml */,
@@ -282,7 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8A0793215DFCE800ADDF6C /* LaunchScreen.storyboard in Resources */,
-				5E8A07C5215F2D2200ADDF6C /* TextXML.xml in Resources */,
+				5E8A07C5215F2D2200ADDF6C /* TestXML.xml in Resources */,
 				5E8A0790215DFCE800ADDF6C /* Assets.xcassets in Resources */,
 				5E8A078E215DFCE500ADDF6C /* Main.storyboard in Resources */,
 			);
