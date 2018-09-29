@@ -1,6 +1,5 @@
 EasyXml
 ================
-* EasyXml is a easy xml tool 
 * EasyXML can let you use data like json
 
 
