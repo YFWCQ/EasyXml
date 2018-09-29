@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author             = { "YFWCQ" => "1049155621@qq.com" }
   spec.source       = { :git => "https://github.com/YFWCQ/EasyXml.git", :tag => "#{spec.version}" }
-  spec.source_files  = YFXmlManagerDemo/EasyXml/**/*.{h,m}"
+  spec.source_files  = "YFXmlManagerDemo/EasyXml/*.{h,m}"
   spec.requires_arc = true
 
 end
